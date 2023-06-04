@@ -6,4 +6,4 @@ I strongly believe this stress is a type of torture;;
 
 This app automatically choise menu, so you can appreciate stressless dinner!
 
-No action will lead you nowhere, just try.
+No action will lead you nowhere, just [try](https://haur514.github.io/SaizeRoulette/).
