@@ -11,6 +11,10 @@ function CharDisplay({char,isPress,setIsPress}) {
     start();
   },[])
 
+  function showRandomCharactor(){
+
+  }
+
   const start = useCallback(() => {
     setIsPress(false);
     intervalRef.current = setInterval(() => {
@@ -24,9 +28,7 @@ function CharDisplay({char,isPress,setIsPress}) {
 
   const stop = useCallback(() => {
     setIsPress(true);
-    clearInterval(intervalRef.current);
-    intervalRef.current = null;
-  })
+  },[])
 
   return (
     <CharDisplayWrapper>
