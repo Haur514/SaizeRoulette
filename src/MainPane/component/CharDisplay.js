@@ -9,10 +9,11 @@ function CharDisplay({char,isPress,setIsPress}) {
 
   useEffect(() => {
     start();
-  },[isPress])
+  },[])
 
   const start = useCallback(() => {
     intervalRef.current = setInterval(() => {
+      console.log("OK");
       if(Math.random() > 0.5){
         setRandomCharactor(String.fromCharCode(Math.floor( Math.random() * 25 ) + 65));
       }else{
