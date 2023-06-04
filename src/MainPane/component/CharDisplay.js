@@ -12,9 +12,8 @@ function CharDisplay({char,isPress,setIsPress}) {
   },[])
 
   const start = useCallback(() => {
-    console.log("start");
+    setIsPress(false);
     intervalRef.current = setInterval(() => {
-      console.log("OK");
       if(Math.random() > 0.5){
         setRandomCharactor(String.fromCharCode(Math.floor( Math.random() * 25 ) + 65));
       }else{
@@ -32,7 +31,7 @@ function CharDisplay({char,isPress,setIsPress}) {
   return (
     <CharDisplayWrapper>
       <Char>{isPress ? char:randomCharactor}</Char>
-      <StartButton style={{background: isPress ? "blue":"rgb(222,10,36"}} onClick={isPress ? start : stop}/>
+      <StartButton style={{background: isPress ? "blue":"rgb(222,10,36"}} onClick={stop}/>
     </CharDisplayWrapper>
   );
 }
