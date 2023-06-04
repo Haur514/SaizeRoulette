@@ -9,7 +9,7 @@ function CharDisplay({char,isPress,setIsPress}) {
 
   useEffect(() => {
     start();
-  },[])
+  },[isPress])
 
   const start = useCallback(() => {
     intervalRef.current = setInterval(() => {
