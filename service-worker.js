@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/SaizeRoulette/precache-manifest.730b31a786584fddede103bd35bf2292.js"
+  "/SaizeRoulette/precache-manifest.bb037b21832f4c0c0ccce2f5ac968e76.js"
 );
 
 workbox.clientsClaim();
