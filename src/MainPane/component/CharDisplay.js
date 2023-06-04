@@ -12,6 +12,7 @@ function CharDisplay({char,isPress,setIsPress}) {
   },[])
 
   const start = useCallback(() => {
+    console.log("start");
     intervalRef.current = setInterval(() => {
       console.log("OK");
       if(Math.random() > 0.5){
