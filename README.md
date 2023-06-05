@@ -1,4 +1,6 @@
-I promise you this app must free you from the burden of selecting menu in Saizeriya.
+![image](https://github.com/Haur514/SaizeRoulette/assets/82633228/f2e80ca8-0310-47a1-b803-b0618dbf6544)
+
+# I promise you this app must free you from the burden of selecting menu in Saizeriya.
 
 As you know, Saizeriya is one of the most luxurious restaurant in Japan,
 so we must take too careful in our menu choices.
