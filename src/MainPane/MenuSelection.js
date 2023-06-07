@@ -5,7 +5,7 @@ export class MenuSelection {
         .then((r) => r.text())
         .then(text  => text.split("\n"))
 
-        const result = menu[Math.floor(Math.random() * menu.length)]
+        const result = menu[Math.floor(Math.random() * (menu.length-1))]
 
         return result
     }
