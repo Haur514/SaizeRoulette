@@ -14,12 +14,14 @@ function RoulettePane() {
   const [isPress3,setIsPress3] = useState(false);
 
   useEffect(() => {
-    setMenu(new MenuSelection().pickUpMenu())
+    (async () => {
+      setMenu(await (new MenuSelection().pickUpMenu()))
+    })()
   },[])
 
-  function handleClearButtonPressed(){
+  async function handleClearButtonPressed(){
     if(isPress0&isPress1&isPress2&isPress3){
-      setMenu(new MenuSelection().pickUpMenu());
+      setMenu(await new MenuSelection().pickUpMenu());
       setIsPress0(false);
       setIsPress1(false);
       setIsPress2(false);
