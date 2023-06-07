@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a1ab015a46cb7f18ad5f",
+    "revision": "204896648d2f4fdb0af2",
     "url": "/SaizeRoulette/static/css/main.a3f800e7.chunk.css"
   },
   {
-    "revision": "a1ab015a46cb7f18ad5f",
-    "url": "/SaizeRoulette/static/js/main.a1ab015a.chunk.js"
+    "revision": "204896648d2f4fdb0af2",
+    "url": "/SaizeRoulette/static/js/main.20489664.chunk.js"
   },
   {
     "revision": "f09d6da400d0c14a7f1d",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/SaizeRoulette/static/media/logo.1a67b067.png"
   },
   {
-    "revision": "1f7e6eac2c712ed12e871721676f72c9",
+    "revision": "cea23270cde0aa38a7d7536a637615e6",
     "url": "/SaizeRoulette/index.html"
   }
 ];
