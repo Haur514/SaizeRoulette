@@ -11,10 +11,6 @@ function CharDisplay({char,isPress,setIsPress}) {
     start();
   },[])
 
-  function showRandomCharactor(){
-
-  }
-
   const start = useCallback(() => {
     setIsPress(false);
     intervalRef.current = setInterval(() => {
@@ -32,7 +28,7 @@ function CharDisplay({char,isPress,setIsPress}) {
 
   return (
     <CharDisplayWrapper>
-      <Char>{isPress ? char:randomCharactor}</Char>
+      <Char>{isPress ? char :randomCharactor}</Char>
       <StartButton style={{background: isPress ? "blue":"rgb(222,10,36"}} onClick={stop}/>
     </CharDisplayWrapper>
   );
