@@ -1,7 +1,7 @@
 export class MenuSelection {
 
     async pickUpMenu(){
-        const menu = await fetch('/menu.txt')
+        const menu = await fetch('./menu.txt')
         .then((r) => r.text())
         .then(text  => text.split("\n"))
 
