@@ -26,19 +26,24 @@ const all_menu_category = [
 ];
 
 const menu_icon_dict = {
-    "AA": AA,
-    "DE": DE,
-    "DG": DG,
-    "MT": MT,
-    "PA": PA,
-    "PZ": PZ,
-    "RP": RP,
-    "SA": SA,
-    "SU": SU,
-    "TP": TP
-}
+  AA: AA,
+  DE: DE,
+  DG: DG,
+  MT: MT,
+  PA: PA,
+  PZ: PZ,
+  RP: RP,
+  SA: SA,
+  SU: SU,
+  TP: TP,
+};
 
-function ConfigPane({ selectedMenu, setSelectedMenu, visibility ,setVisibility}) {
+function ConfigPane({
+  selectedMenu,
+  setSelectedMenu,
+  visibility,
+  setVisibility,
+}) {
   function addMenu(menu) {
     let tmp = selectedMenu.concat();
     tmp.push(menu);
@@ -62,17 +67,17 @@ function ConfigPane({ selectedMenu, setSelectedMenu, visibility ,setVisibility})
     }
   }
 
-  function handleBackButtonClicked(){
+  function handleBackButtonClicked() {
     setVisibility(false);
   }
 
   return (
-    <ParentPane style={{visibility: visibility? "visible":"hidden"}}>
+    <ParentPane style={{ visibility: visibility ? "visible" : "hidden" }}>
       <BackGroundPane>
         {all_menu_category.map((menu) => {
           return (
             <RadioButtonLabel>
-                <MenuLogoImg src={menu_icon_dict[menu]}/>
+              <MenuLogoImg src={menu_icon_dict[menu]} />
               <input
                 type="radio"
                 value={menu}
@@ -84,9 +89,7 @@ function ConfigPane({ selectedMenu, setSelectedMenu, visibility ,setVisibility})
           );
         })}
         <BackButtonPane>
-            <BackButton onClick={handleBackButtonClicked}>
-                戻る
-            </BackButton>
+          <BackButton onClick={handleBackButtonClicked}>戻る</BackButton>
         </BackButtonPane>
       </BackGroundPane>
     </ParentPane>
@@ -94,27 +97,26 @@ function ConfigPane({ selectedMenu, setSelectedMenu, visibility ,setVisibility})
 }
 
 const MenuLogoImg = styled.img`
-width: 2em;
-height: 2em;
-margin: 0 1em;
-`
+  width: 2em;
+  height: 2em;
+  margin: 0 1em;
+`;
 
-const BackButtonPane = styled.div`
-`
+const BackButtonPane = styled.div``;
 
 const BackButton = styled.button`
-    margin: 1em auto;
-    display: block;
-    font-size: 1em;
-    width: 50%;
-    height: 2em;
-`
+  margin: 1em auto;
+  display: block;
+  font-size: 1em;
+  width: 50%;
+  height: 2em;
+`;
 
 const RadioButtonLabel = styled.label`
-    display: flex;
-    margin: 0em 1em;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin: 0em 1em;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ParentPane = styled.div`
@@ -125,11 +127,13 @@ const ParentPane = styled.div`
 `;
 
 const BackGroundPane = styled.div`
-    position: relative;
-    background: #fff;
-    padding: 1em;
-    border-radius: 0.5em;
-    margin: 1em;
+  position: relative;
+  background: #fff;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin: 1em;
+  overflow-y: scroll;
+  max-height: 80vh;
 `;
 
 export { ConfigPane };

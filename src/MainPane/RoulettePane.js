@@ -13,11 +13,13 @@ function RoulettePane({menuCandidate}) {
   const [isPress2,setIsPress2] = useState(false);
   const [isPress3,setIsPress3] = useState(false);
 
+  let isAnyPressed = isPress0 | isPress1 | isPress2 | isPress3;
+
   useEffect(() => {
     (async () => {
       setMenu(await MenuSelection.pickUpMenu(menuCandidate))
     })()
-  },[menuCandidate])
+  },[isAnyPressed])
 
   async function handleClearButtonPressed(){
     if(isPress0&isPress1&isPress2&isPress3){
