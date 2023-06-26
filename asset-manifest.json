@@ -1,7 +1,7 @@
 {
   "main.css": "/SaizeRoulette/static/css/main.2915b3bd.chunk.css",
-  "main.js": "/SaizeRoulette/static/js/main.b47fe3bb.chunk.js",
-  "main.js.map": "/SaizeRoulette/static/js/main.b47fe3bb.chunk.js.map",
+  "main.js": "/SaizeRoulette/static/js/main.3e3ce70b.chunk.js",
+  "main.js.map": "/SaizeRoulette/static/js/main.3e3ce70b.chunk.js.map",
   "static/js/1.046e0513.chunk.js": "/SaizeRoulette/static/js/1.046e0513.chunk.js",
   "static/js/1.046e0513.chunk.js.map": "/SaizeRoulette/static/js/1.046e0513.chunk.js.map",
   "static/js/2.005d2053.chunk.js": "/SaizeRoulette/static/js/2.005d2053.chunk.js",
@@ -20,6 +20,6 @@
   "static/media/TP.png": "/SaizeRoulette/static/media/TP.68b14cd0.png",
   "static/css/main.2915b3bd.chunk.css.map": "/SaizeRoulette/static/css/main.2915b3bd.chunk.css.map",
   "index.html": "/SaizeRoulette/index.html",
-  "precache-manifest.4eb843f31a9c552c5327822196b940b6.js": "/SaizeRoulette/precache-manifest.4eb843f31a9c552c5327822196b940b6.js",
+  "precache-manifest.0a97010612a3ca5a1b9cb6575c0fcf9f.js": "/SaizeRoulette/precache-manifest.0a97010612a3ca5a1b9cb6575c0fcf9f.js",
   "service-worker.js": "/SaizeRoulette/service-worker.js"
 }
