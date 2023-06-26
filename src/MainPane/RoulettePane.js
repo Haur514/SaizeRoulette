@@ -4,7 +4,7 @@ import { CharDisplay } from "./component/CharDisplay";
 import { useEffect ,useState} from "react";
 import { MenuSelection } from "./MenuSelection";
 
-function RoulettePane() {
+function RoulettePane({menuCandidate}) {
 
   const [menu,setMenu] = useState([]);
 
@@ -15,13 +15,13 @@ function RoulettePane() {
 
   useEffect(() => {
     (async () => {
-      setMenu(await (new MenuSelection().pickUpMenu()))
+      setMenu(await MenuSelection.pickUpMenu(menuCandidate))
     })()
-  },[])
+  },[menuCandidate])
 
   async function handleClearButtonPressed(){
     if(isPress0&isPress1&isPress2&isPress3){
-      setMenu(await new MenuSelection().pickUpMenu());
+      setMenu(await MenuSelection.pickUpMenu(menuCandidate));
       setIsPress0(false);
       setIsPress1(false);
       setIsPress2(false);
