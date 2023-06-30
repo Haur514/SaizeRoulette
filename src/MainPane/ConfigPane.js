@@ -71,9 +71,27 @@ function ConfigPane({
     setVisibility(false);
   }
 
+  function handleMainDishButtonClicked() {
+    setSelectedMenu(["DG", "PA", "PZ", "RP"]);
+  }
+
+  function handleAppetizerButtonClicked() {
+    setSelectedMenu(["AA", "SA", "SU"]);
+  }
+
   return (
     <ParentPane style={{ visibility: visibility ? "visible" : "hidden" }}>
       <BackGroundPane>
+        <TemplatePane>
+          <MainDishButton onClick=
+          {handleAppetizerButtonClicked}>
+            <MenuLogoImg src={AA}/>
+            前菜
+          </MainDishButton>
+          <MainDishButton onClick={handleMainDishButtonClicked}>
+            主菜
+          </MainDishButton>
+        </TemplatePane>
         {all_menu_category.map((menu) => {
           return (
             <RadioButtonLabel>
@@ -134,6 +152,22 @@ const BackGroundPane = styled.div`
   margin: 1em;
   overflow-y: scroll;
   max-height: 80vh;
+`;
+
+const TemplatePane = styled.div`
+  display: flex;
+`;
+
+const MainDishButton = styled.div`
+  position: relative;
+  display: flex;
+  height: 2em;
+  width: 49.5%;
+  margin: 0.25%;
+  text-align: center;
+  background: rgb(225, 225, 225);
+  justify-content: center;
+  align-items: center;
 `;
 
 export { ConfigPane };

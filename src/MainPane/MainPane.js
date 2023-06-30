@@ -21,7 +21,6 @@ function MainPane() {
 
   const [configVisibility, setConfigVisibility] = useState(false);
 
-  // const [isConfigVisible,setIsConfigVisible] =
 
   function handleIconImageClicked() {
     setConfigVisibility(!configVisibility);
