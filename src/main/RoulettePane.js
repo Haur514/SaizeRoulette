@@ -4,7 +4,7 @@ import { CharDisplay } from "./component/CharDisplay";
 import { useEffect, useState } from "react";
 import { MenuSelection } from "./MenuSelection";
 
-function RoulettePane({ menuCandidate }) {
+function RoulettePane({ menuCandidate ,setEffectVisibility}) {
   const [menu, setMenu] = useState([]);
 
   const [isPress0, setIsPress0] = useState(false);
@@ -13,12 +13,21 @@ function RoulettePane({ menuCandidate }) {
   const [isPress3, setIsPress3] = useState(false);
 
   let isAnyPressed = isPress0 | isPress1 | isPress2 | isPress3;
+  let isAllPressed = isPress0 & isPress1 & isPress2 & isPress3;
 
   useEffect(() => {
     (async () => {
       setMenu(await MenuSelection.pickUpMenu(menuCandidate));
     })();
   }, [isAnyPressed]);
+
+  useEffect(() => {
+    if(isAllPressed){
+      if(menu.startsWith("TP")){
+        setTimeout(() => setEffectVisibility(true),800)
+      }
+    }
+  }, [isAllPressed])
 
   async function handleClearButtonPressed() {
     if (isPress0 & isPress1 & isPress2 & isPress3) {

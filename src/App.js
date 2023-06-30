@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from "react";
-import {MainPane} from './MainPane/MainPane'
+import {MainPane} from './main/MainPane'
 
 function App() {
   return (

@@ -85,7 +85,6 @@ function ConfigPane({
         <TemplatePane>
           <MainDishButton onClick=
           {handleAppetizerButtonClicked}>
-            <MenuLogoImg src={AA}/>
             前菜
           </MainDishButton>
           <MainDishButton onClick={handleMainDishButtonClicked}>

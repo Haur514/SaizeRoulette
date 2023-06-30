@@ -4,6 +4,7 @@ import SaizeLogo from "./../image/logo.png";
 import { RoulettePane } from "./RoulettePane";
 import { ConfigPane } from "./ConfigPane";
 import { useState } from "react";
+import { EffectPane } from "../effect/EffectPane";
 
 function MainPane() {
   const [selectedMenu, setSelectedMenu] = useState([
@@ -20,6 +21,7 @@ function MainPane() {
   ]);
 
   const [configVisibility, setConfigVisibility] = useState(false);
+  const [effectVisibility, setEffectVisibility] = useState(false);
 
 
   function handleIconImageClicked() {
@@ -36,6 +38,9 @@ function MainPane() {
   return (
     <ParentPane>
       <Background style={{ width: getWindowWidth() }}>
+        <EffectPane visibility={effectVisibility} setVisibility={setEffectVisibility}>
+          hoge
+        </EffectPane>
         <ConfigPane
           selectedMenu={selectedMenu}
           setSelectedMenu={setSelectedMenu}
@@ -43,7 +48,7 @@ function MainPane() {
           setVisibility={setConfigVisibility}
         />
         <LogoImg src={SaizeLogo} alt="icon" onClick={handleIconImageClicked} />
-        <RoulettePane menuCandidate={selectedMenu} />
+        <RoulettePane menuCandidate={selectedMenu} setEffectVisibility={setEffectVisibility}/>
       </Background>
     </ParentPane>
   );
