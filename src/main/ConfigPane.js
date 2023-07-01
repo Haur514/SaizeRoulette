@@ -12,19 +12,6 @@ import SA from "./../image/SA.png";
 import SU from "./../image/SU.png";
 import TP from "./../image/TP.png";
 
-const all_menu_category = [
-  "AA",
-  "DE",
-  "DG",
-  "MT",
-  "PA",
-  "PZ",
-  "RP",
-  "SA",
-  "SU",
-  "TP",
-];
-
 const menu_icon_dict = {
   AA: AA,
   DE: DE,
@@ -83,15 +70,14 @@ function ConfigPane({
     <ParentPane style={{ visibility: visibility ? "visible" : "hidden" }}>
       <BackGroundPane>
         <TemplatePane>
-          <MainDishButton onClick=
-          {handleAppetizerButtonClicked}>
+          <MainDishButton onClick={handleAppetizerButtonClicked}>
             前菜
           </MainDishButton>
           <MainDishButton onClick={handleMainDishButtonClicked}>
             主菜
           </MainDishButton>
         </TemplatePane>
-        {all_menu_category.map((menu) => {
+        {Object.keys(menu_icon_dict).map((menu) => {
           return (
             <RadioButtonLabel>
               <MenuLogoImg src={menu_icon_dict[menu]} />

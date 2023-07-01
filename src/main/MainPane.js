@@ -80,6 +80,7 @@ function MainPane() {
 }
 
 const ParentPane = styled.div`
+  overscroll-behavior-y: none;
   background: #9eff9e;
 `;
 
