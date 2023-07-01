@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "556a193892bda835bb5c",
-    "url": "/SaizeRoulette/static/css/main.667645e2.chunk.css"
+    "revision": "d3b19d7ed4ccdf557896",
+    "url": "/SaizeRoulette/static/css/main.3d50d79c.chunk.css"
   },
   {
-    "revision": "556a193892bda835bb5c",
-    "url": "/SaizeRoulette/static/js/main.556a1938.chunk.js"
+    "revision": "d3b19d7ed4ccdf557896",
+    "url": "/SaizeRoulette/static/js/main.d3b19d7e.chunk.js"
   },
   {
-    "revision": "cf042e081f8a87233510",
-    "url": "/SaizeRoulette/static/js/1.cf042e08.chunk.js"
+    "revision": "23e5026d3c124a934bc7",
+    "url": "/SaizeRoulette/static/js/1.23e5026d.chunk.js"
   },
   {
-    "revision": "b86d772e0cbf0c4ba7ff",
-    "url": "/SaizeRoulette/static/js/2.b86d772e.chunk.js"
+    "revision": "455d10cf67a6e2091e26",
+    "url": "/SaizeRoulette/static/js/2.455d10cf.chunk.js"
   },
   {
-    "revision": "f52f22a72dbcc0c0fa5c",
-    "url": "/SaizeRoulette/static/js/3.f52f22a7.chunk.js"
+    "revision": "f08ab73c1481e15fe7d4",
+    "url": "/SaizeRoulette/static/js/3.f08ab73c.chunk.js"
   },
   {
-    "revision": "3a5289f095ed0d5aec7d",
-    "url": "/SaizeRoulette/static/js/runtime~main.3a5289f0.js"
+    "revision": "2fac1940518caeb277e2",
+    "url": "/SaizeRoulette/static/js/runtime~main.2fac1940.js"
   },
   {
     "revision": "1a67b0671ddfdf8538c809c9e55b34ec",
@@ -72,7 +72,11 @@ self.__precacheManifest = [
     "url": "/SaizeRoulette/static/media/aori.f644be0d.wav"
   },
   {
-    "revision": "070197b7ea40f928fb0e391de098a290",
+    "revision": "2171e28fd7048e222c6f87e2e6e62ce2",
+    "url": "/SaizeRoulette/static/media/historyButtonImg.2171e28f.svg"
+  },
+  {
+    "revision": "1fcb48b1d4ba3e7f578637e48e67fc39",
     "url": "/SaizeRoulette/index.html"
   }
 ];
