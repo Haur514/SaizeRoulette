@@ -1,32 +1,21 @@
 import styled from "styled-components";
 import React from "react";
 import { useState ,useEffect} from "react";
-import EF1 from "./../image/effect1.png";
-import useSound from "use-sound";
-import sfx from "../sound/aori.wav"
 
-
-function EffectPane({
+function HistoryPane({
   visibility,
-  setVisibility
+  setVisibility,
+  historyList
 }) {
-
-    const [isSoundAllow,setIsSoundAllow] = useState(false);
-    const[play_ef1_sound] = useSound(sfx);
-
-    useEffect(() => {
-        if(visibility){
-            if(isSoundAllow){
-                play_ef1_sound();
-            }
-        }
-    },[visibility])
   return (
     <ParentPane style={{visibility: visibility ? "visible":"hidden"}} onClick={() => {setVisibility(!visibility)}}>
-        <EF1IMG src={EF1}/>
-        <EF1TEXT>
-            残念...w
-        </EF1TEXT>
+        {historyList.map((history) => {
+            return(
+                <HistoryText>
+                    {history}
+                </HistoryText>
+            );
+        })}
     </ParentPane>
   );
 }
@@ -44,7 +33,7 @@ const ParentPane = styled.div`
   background: rgba(0,0,0,0.9);
 `;
 
-const EF1TEXT = styled.div`
+const HistoryText = styled.div`
     position: relative;
     background: #fff;
     font-size: 2em;
@@ -55,4 +44,4 @@ const EF1TEXT = styled.div`
     text-shadow: 1px 5px 16px rgba(255,178,216,0.9);
 `
 
-export { EffectPane };
+export { HistoryPane };

@@ -4,7 +4,7 @@ import { CharDisplay } from "./component/CharDisplay";
 import { useEffect, useState } from "react";
 import { MenuSelection } from "./MenuSelection";
 
-function RoulettePane({ menuCandidate ,setEffectVisibility}) {
+function RoulettePane({ menuCandidate ,setEffectVisibility, addHistory}) {
   const [menu, setMenu] = useState([]);
 
   const [isPress0, setIsPress0] = useState(false);
@@ -26,6 +26,7 @@ function RoulettePane({ menuCandidate ,setEffectVisibility}) {
       if(menu.startsWith("TP")){
         setTimeout(() => setEffectVisibility(true),800)
       }
+      addHistory(menu);
     }
   }, [isAllPressed])
 

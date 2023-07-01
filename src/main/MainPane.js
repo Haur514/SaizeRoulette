@@ -5,6 +5,9 @@ import { RoulettePane } from "./RoulettePane";
 import { ConfigPane } from "./ConfigPane";
 import { useState } from "react";
 import { EffectPane } from "../effect/EffectPane";
+import { HistoryPane } from "./history/HistoryPane";
+
+import historyButtonImg from "../image/historyButtonImg.svg";
 
 function MainPane() {
   const [selectedMenu, setSelectedMenu] = useState([
@@ -22,7 +25,9 @@ function MainPane() {
 
   const [configVisibility, setConfigVisibility] = useState(false);
   const [effectVisibility, setEffectVisibility] = useState(false);
+  const [historyVisibility, setHistoryVisibility] = useState(false);
 
+  const [historyList, setHistoryList] = useState([]);
 
   function handleIconImageClicked() {
     setConfigVisibility(!configVisibility);
@@ -35,12 +40,28 @@ function MainPane() {
     );
   }
 
+  function addHistory(menu) {
+    const tmp = [...historyList];
+    tmp.push(menu);
+    setHistoryList(tmp);
+  }
+
   return (
     <ParentPane>
       <Background style={{ width: getWindowWidth() }}>
-        <EffectPane visibility={effectVisibility} setVisibility={setEffectVisibility}>
-          hoge
-        </EffectPane>
+        <HistoryShowButton onClick={() => setHistoryVisibility(true)}>
+          <HistoryShowButtonImg src={historyButtonImg} />
+          履歴
+        </HistoryShowButton>
+        <HistoryPane
+          visibility={historyVisibility}
+          setVisibility={setHistoryVisibility}
+          historyList={historyList}
+        />
+        <EffectPane
+          visibility={effectVisibility}
+          setVisibility={setEffectVisibility}
+        />
         <ConfigPane
           selectedMenu={selectedMenu}
           setSelectedMenu={setSelectedMenu}
@@ -48,7 +69,11 @@ function MainPane() {
           setVisibility={setConfigVisibility}
         />
         <LogoImg src={SaizeLogo} alt="icon" onClick={handleIconImageClicked} />
-        <RoulettePane menuCandidate={selectedMenu} setEffectVisibility={setEffectVisibility}/>
+        <RoulettePane
+          menuCandidate={selectedMenu}
+          setEffectVisibility={setEffectVisibility}
+          addHistory={addHistory}
+        />
       </Background>
     </ParentPane>
   );
@@ -68,6 +93,21 @@ const Background = styled.div`
 
 const LogoImg = styled.img`
   width: 100%;
+`;
+
+const HistoryShowButton = styled.button`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const HistoryShowButtonImg = styled.img`
+  width: 1em;
+  height: 1em;
 `;
 
 export { MainPane };
