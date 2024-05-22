@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "c999554945ed1ab0ee22",
-    "url": "/SaizeRoulette/static/css/main.3d50d79c.chunk.css"
+    "revision": "6e4a8ddd2bf506904681",
+    "url": "/SaizeRoulette/static/css/main.84ec945d.chunk.css"
   },
   {
-    "revision": "c999554945ed1ab0ee22",
-    "url": "/SaizeRoulette/static/js/main.c9995549.chunk.js"
+    "revision": "6e4a8ddd2bf506904681",
+    "url": "/SaizeRoulette/static/js/main.6e4a8ddd.chunk.js"
   },
   {
     "revision": "23e5026d3c124a934bc7",
     "url": "/SaizeRoulette/static/js/1.23e5026d.chunk.js"
   },
   {
-    "revision": "455d10cf67a6e2091e26",
-    "url": "/SaizeRoulette/static/js/2.455d10cf.chunk.js"
+    "revision": "575243a8b15324a13d84",
+    "url": "/SaizeRoulette/static/js/2.575243a8.chunk.js"
   },
   {
     "revision": "f08ab73c1481e15fe7d4",
@@ -22,6 +22,14 @@ self.__precacheManifest = [
   {
     "revision": "2fac1940518caeb277e2",
     "url": "/SaizeRoulette/static/js/runtime~main.2fac1940.js"
+  },
+  {
+    "revision": "09fdbf9957c3c8376e92ca35180fc76b",
+    "url": "/SaizeRoulette/static/media/effect1.09fdbf99.png"
+  },
+  {
+    "revision": "f644be0d7a3e22c5c9c41bea59127b84",
+    "url": "/SaizeRoulette/static/media/aori.f644be0d.wav"
   },
   {
     "revision": "1a67b0671ddfdf8538c809c9e55b34ec",
@@ -64,19 +72,11 @@ self.__precacheManifest = [
     "url": "/SaizeRoulette/static/media/TP.68b14cd0.png"
   },
   {
-    "revision": "09fdbf9957c3c8376e92ca35180fc76b",
-    "url": "/SaizeRoulette/static/media/effect1.09fdbf99.png"
-  },
-  {
-    "revision": "f644be0d7a3e22c5c9c41bea59127b84",
-    "url": "/SaizeRoulette/static/media/aori.f644be0d.wav"
-  },
-  {
     "revision": "2171e28fd7048e222c6f87e2e6e62ce2",
     "url": "/SaizeRoulette/static/media/historyButtonImg.2171e28f.svg"
   },
   {
-    "revision": "0a590c4849c75cb8e8a50b3a8cd5861a",
+    "revision": "cec8e9967a1e94eac0204b9d8701ab75",
     "url": "/SaizeRoulette/index.html"
   }
 ];
