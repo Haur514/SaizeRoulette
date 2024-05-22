@@ -1,26 +1,30 @@
+import React, { useState } from "react";
 import styled from "styled-components";
-import React from "react";
-import SaizeLogo from "./../image/logo.png";
-import { RoulettePane } from "./RoulettePane";
-import { ConfigPane } from "./ConfigPane";
-import { useState } from "react";
 import { EffectPane } from "../effect/EffectPane";
+import SaizeLogo from "./../image/logo.png";
+import { ConfigPane } from "./ConfigPane";
+import { RoulettePane } from "./RoulettePane";
 import { HistoryPane } from "./history/HistoryPane";
 
 import historyButtonImg from "../image/historyButtonImg.svg";
 
 function MainPane() {
   const [selectedMenu, setSelectedMenu] = useState([
-    "AA",
-    "DE",
-    "DG",
-    "MT",
-    "PA",
-    "PZ",
-    "RP",
-    "SA",
-    "SU",
-    "TP",
+    "12",
+    "13",
+    "14",
+    "19",
+    "21",
+    "22",
+    "23",
+    "27",
+    "31",
+    "32",
+    "33",
+    "34",
+    "39",
+    "45",
+    "51"
   ]);
 
   const [configVisibility, setConfigVisibility] = useState(false);

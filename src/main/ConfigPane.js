@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import React from "react";
-import { useState } from "react";
+import styled from "styled-components";
 import AA from "./../image/AA.png";
 import DE from "./../image/DE.png";
 import DG from "./../image/DG.png";
@@ -13,16 +12,16 @@ import SU from "./../image/SU.png";
 import TP from "./../image/TP.png";
 
 const menu_icon_dict = {
-  AA: AA,
-  DE: DE,
-  DG: DG,
-  MT: MT,
-  PA: PA,
-  PZ: PZ,
-  RP: RP,
-  SA: SA,
-  SU: SU,
-  TP: TP,
+  "14": AA,
+  "32": DE,
+  "21": DG,
+  "24": MT,
+  "23": PA,
+  "22": PZ,
+  "31": RP,
+  "12": SA,
+  "13": SU,
+  "43": TP,
 };
 
 function ConfigPane({
@@ -59,11 +58,11 @@ function ConfigPane({
   }
 
   function handleMainDishButtonClicked() {
-    setSelectedMenu(["DG", "PA", "PZ", "RP"]);
+    setSelectedMenu(["21", "22", "23", "24"]);
   }
 
   function handleAppetizerButtonClicked() {
-    setSelectedMenu(["AA", "SA", "SU"]);
+    setSelectedMenu(["12", "13", "14"]);
   }
 
   return (
